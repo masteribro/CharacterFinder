@@ -524,13 +524,13 @@
       "languageVersion": "3.4"
     },
     {
-      "name": "CharacterFinder",
+      "name": "character_finder",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2025-05-12T17:30:59.079964Z",
+  "generated": "2025-05-12T18:20:53.593658Z",
   "generator": "pub",
   "generatorVersion": "3.7.2",
   "flutterRoot": "file:///Users/ibrahimmohammed/downloads/flutter",

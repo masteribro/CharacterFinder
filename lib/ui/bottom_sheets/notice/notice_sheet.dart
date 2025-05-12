@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:CharacterFinder/ui/common/app_colors.dart';
-import 'package:CharacterFinder/ui/common/ui_helpers.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
+import '../../common/app_colors.dart';
+import '../../common/ui_helpers.dart';
 import 'notice_sheet_model.dart';
 
 class NoticeSheet extends StackedView<NoticeSheetModel> {

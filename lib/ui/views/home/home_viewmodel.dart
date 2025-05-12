@@ -1,9 +1,7 @@
-import 'package:CharacterFinder/app/app.bottomsheets.dart';
-import 'package:CharacterFinder/app/app.dialogs.dart';
-import 'package:CharacterFinder/app/app.locator.dart';
-import 'package:CharacterFinder/ui/common/app_strings.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
+import '../../../app/app.locator.dart';
+import '../../common/app_strings.dart';
 
 class HomeViewModel extends BaseViewModel {
   final _dialogService = locator<DialogService>();
@@ -20,7 +18,6 @@ class HomeViewModel extends BaseViewModel {
 
   void showDialog() {
     _dialogService.showCustomDialog(
-      variant: DialogType.infoAlert,
       title: 'Stacked Rocks!',
       description: 'Give stacked $_counter stars on Github',
     );
@@ -28,7 +25,6 @@ class HomeViewModel extends BaseViewModel {
 
   void showBottomSheet() {
     _bottomSheetService.showCustomSheet(
-      variant: BottomSheetType.notice,
       title: ksHomeBottomSheetTitle,
       description: ksHomeBottomSheetDescription,
     );
