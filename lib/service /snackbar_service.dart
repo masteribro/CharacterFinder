@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class SnackbarService {
   static final GlobalKey<ScaffoldMessengerState> messengerKey =
-  GlobalKey<ScaffoldMessengerState>();
+      GlobalKey<ScaffoldMessengerState>();
 
   static void showError(String message) {
     _showSnackbar(message, Colors.red);
