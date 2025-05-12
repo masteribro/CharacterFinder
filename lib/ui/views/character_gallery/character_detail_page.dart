@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 
+import '../../../model/characters_response_model.dart';
 import '../../common/loader.dart';
 
 class CharacterDetailView extends StatefulWidget {
@@ -13,7 +14,7 @@ class CharacterDetailView extends StatefulWidget {
 }
 
 class _CharacterDetailViewState extends State<CharacterDetailView> {
-  Map character = {};
+  Character? character;
   bool isLoading = true;
 
   @override
@@ -28,7 +29,7 @@ class _CharacterDetailViewState extends State<CharacterDetailView> {
           'https://rickandmortyapi.com/api/character/${widget.characterId}'));
       if (response.statusCode == 200) {
         setState(() {
-          character = json.decode(response.body);
+          character = Character.fromJson(json.decode(response.body));
           isLoading = false;
         });
       } else {
@@ -48,43 +49,43 @@ class _CharacterDetailViewState extends State<CharacterDetailView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(character['name'] ?? 'Loading...'),
+        title: Text(character?.name ?? 'Loading...'),
         centerTitle: true,
       ),
       body: isLoading
           ? const Center(child: Loader())
           : SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: Card(
-                elevation: 4,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: Image.network(
-                    character['image'],
-                    height: 220,
-                    width: 220,
-                    fit: BoxFit.cover,
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Center(
+                    child: Card(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(16),
+                        child: Image.network(
+                          character?.image ?? "No image",
+                          height: 220,
+                          width: 220,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
                   ),
-                ),
+                  const SizedBox(height: 24),
+                  _buildDetailRow("Name", character?.name ?? ""),
+                  _buildDetailRow("Status", character?.status ?? ""),
+                  _buildDetailRow("Species", character?.species ?? ""),
+                  _buildDetailRow("Gender", character?.gender ?? ""),
+                  _buildDetailRow("Origin", character?.origin.name ?? ""),
+                  _buildDetailRow("Location", character?.location.name ?? ""),
+                ],
               ),
             ),
-            const SizedBox(height: 24),
-            _buildDetailRow("Name", character['name']),
-            _buildDetailRow("Status", character['status']),
-            _buildDetailRow("Species", character['species']),
-            _buildDetailRow("Gender", character['gender']),
-            _buildDetailRow("Origin", character['origin']['name']),
-            _buildDetailRow("Location", character['location']['name']),
-          ],
-        ),
-      ),
     );
   }
 
@@ -103,5 +104,5 @@ class _CharacterDetailViewState extends State<CharacterDetailView> {
         ),
       ),
     );
-}
+  }
 }

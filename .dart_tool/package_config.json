@@ -153,7 +153,7 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///Users/ibrahimmohammed/Downloads/flutter/packages/flutter",
+      "rootUri": "file:///Users/ibrahimmohammed/downloads/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -171,7 +171,7 @@
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///Users/ibrahimmohammed/Downloads/flutter/packages/flutter_test",
+      "rootUri": "file:///Users/ibrahimmohammed/downloads/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -387,7 +387,7 @@
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///Users/ibrahimmohammed/Downloads/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///Users/ibrahimmohammed/downloads/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -536,10 +536,10 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2025-05-12T21:34:40.126619Z",
+  "generated": "2025-05-12T21:48:13.201074Z",
   "generator": "pub",
   "generatorVersion": "3.7.2",
-  "flutterRoot": "file:///Users/ibrahimmohammed/Downloads/flutter",
+  "flutterRoot": "file:///Users/ibrahimmohammed/downloads/flutter",
   "flutterVersion": "3.29.2",
   "pubCache": "file:///Users/ibrahimmohammed/.pub-cache"
 }
