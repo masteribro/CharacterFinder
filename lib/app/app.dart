@@ -1,20 +1,20 @@
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
-// import '../ui/bottom_sheets/notice/notice_sheet.dart';
-// import '../ui/dialogs/info_alert/info_alert_dialog.dart';
-// import '../ui/views/home/home_view.dart';
-// import '../ui/views/startup/startup_view.dart';
 import 'package:character_finder/ui/bottom_sheets/notice/notice_sheet.dart';
 import 'package:character_finder/ui/dialogs/info_alert/info_alert_dialog.dart';
 import 'package:character_finder/ui/views/home/home_view.dart';
 import 'package:character_finder/ui/views/startup/startup_view.dart';
+import 'package:character_finder/ui/views/character_gallery/character_gallery_view.dart';
+
 // @stacked-import
 
 @StackedApp(
   routes: [
     MaterialRoute(page: HomeView),
     MaterialRoute(page: StartupView),
-    // @stacked-route
+    MaterialRoute(page: CharacterGalleryView),
+
+// @stacked-route
   ],
   dependencies: [
     LazySingleton(classType: BottomSheetService),

@@ -153,7 +153,7 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///Users/ibrahimmohammed/downloads/flutter/packages/flutter",
+      "rootUri": "file:///Users/ibrahimmohammed/Downloads/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -164,8 +164,14 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "flutter_spinkit",
+      "rootUri": "file:///Users/ibrahimmohammed/.pub-cache/hosted/pub.dev/flutter_spinkit-5.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
-      "rootUri": "file:///Users/ibrahimmohammed/downloads/flutter/packages/flutter_test",
+      "rootUri": "file:///Users/ibrahimmohammed/Downloads/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -381,7 +387,7 @@
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///Users/ibrahimmohammed/downloads/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///Users/ibrahimmohammed/Downloads/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -530,10 +536,10 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2025-05-12T18:20:53.593658Z",
+  "generated": "2025-05-12T21:34:40.126619Z",
   "generator": "pub",
   "generatorVersion": "3.7.2",
-  "flutterRoot": "file:///Users/ibrahimmohammed/downloads/flutter",
+  "flutterRoot": "file:///Users/ibrahimmohammed/Downloads/flutter",
   "flutterVersion": "3.29.2",
   "pubCache": "file:///Users/ibrahimmohammed/.pub-cache"
 }
