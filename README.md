@@ -22,7 +22,7 @@ principles in Flutter.
 
 ## Stacked Architecture
 
-This project uses the [Stacked Architecture](https://pub.dev/packages/stacked), 
+This project uses the [Stacked Architecture](https://stacked.filledstacks.com/), 
 a Flutter MVVM (Model-View-ViewModel) framework that helps in separating business logic from UI. 
 It encourages testable, scalable, and maintainable code by promoting a clear separation of concerns.
 
@@ -31,7 +31,7 @@ With Stacked:
 - Navigation and services are managed with dependency injection
 - Reactive state updates with `notifyListeners()` simplify state management
 
-Learn more about Stacked here: [https://pub.dev/packages/stacked](https://pub.dev/packages/stacked)
+Learn more about Stacked here: [https://stacked.filledstacks.com/](https://stacked.filledstacks.com/)
 
 ## Getting Started
 
