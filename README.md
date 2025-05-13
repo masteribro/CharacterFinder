@@ -16,7 +16,8 @@ principles in Flutter.
 ## Tech Stack
 - Flutter for cross-platform mobile development
 - HTTP package for API integration
-- Provider/Bloc for state management
+- Stacked Architecture for state management
+- Flutter spinkit package for animated loading indicator
 - No backend required, uses public Rick and Morty API
 
 ## Getting Started
