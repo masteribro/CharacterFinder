@@ -44,3 +44,22 @@ Learn more about Stacked here: [https://stacked.filledstacks.com/](https://stack
 1. Clone this repository
 ```bash
 git clone https://github.com/masteribro/CharacterFinder.git
+```
+
+2. Navigate to project directory
+```bash
+cd character-finder
+```
+
+3. Install dependencies
+```bash
+flutter pub get
+```
+
+4. Run the app
+```bash
+flutter run
+```
+
+## Acknowledgements
+- [Rick and Morty API](https://rickandmortyapi.com/) for providing the data# CharacterFinder
