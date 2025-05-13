@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
-
 import '../../../model/characters_response_model.dart';
+import '../../../network/api_constant.dart';
 import '../../common/loader.dart';
 
 class CharacterDetailView extends StatefulWidget {
@@ -23,10 +23,11 @@ class _CharacterDetailViewState extends State<CharacterDetailView> {
     fetchCharacter();
   }
 
+  /// Fetches character details from the API and updates the UI.
+  /// Shows a snackbar on error by calling [showError].
   Future<void> fetchCharacter() async {
     try {
-      final response = await http.get(Uri.parse(
-          'https://rickandmortyapi.com/api/character/${widget.characterId}'));
+      final response = await http.get(Uri.parse('$kApiBaseUrl/api/character/${widget.characterId}'));
       if (response.statusCode == 200) {
         setState(() {
           character = Character.fromJson(json.decode(response.body));
