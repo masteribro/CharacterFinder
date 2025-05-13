@@ -7,7 +7,7 @@ Designed as a demonstration of effective API integration, state management, and 
 principles in Flutter.
 
 ## Features
-- Character listing with pagination
+- Character listing 
 - Search functionality by name
 - Detailed character information view
 - Error handling and loading states
