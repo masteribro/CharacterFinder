@@ -14,6 +14,10 @@ class CharacterGalleryViewModel extends BaseViewModel {
   bool isLoading = true;
   String searchQuery = "";
   final SnackbarService _snackBar = SnackbarService();
+  // Create a FocusNode to manage TextField focus
+  final FocusNode searchFocusNode = FocusNode();
+
+
   Future runStartupLogic() async {
     fetchCharacters();
   }
@@ -46,8 +50,9 @@ class CharacterGalleryViewModel extends BaseViewModel {
     notifyListeners();
   }
 
-  void navigateToCharacterDetailPage(int character) {
+  void navigateToCharacterDetailPage(int characterId) {
     _navigationService
-        .navigateToView(CharacterDetailView(characterId: character));
+        .navigateToView(CharacterDetailView(characterId: characterId));
+    searchFocusNode.unfocus();
   }
 }
