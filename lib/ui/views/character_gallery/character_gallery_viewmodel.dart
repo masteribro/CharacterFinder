@@ -1,3 +1,4 @@
+import 'package:character_finder/app/app.router.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'dart:convert';
@@ -6,10 +7,8 @@ import 'package:stacked_services/stacked_services.dart';
 import '../../../app/app.locator.dart';
 import '../../../model/characters_response_model.dart';
 import '../../../network/api_constant.dart';
-import 'character_detail_page.dart';
 
 class CharacterGalleryViewModel extends BaseViewModel {
-
   /// Locates and assigns the navigation service for handling app navigation.
   final _navigationService = locator<NavigationService>();
   List<Character> characters = [];
@@ -20,7 +19,6 @@ class CharacterGalleryViewModel extends BaseViewModel {
   final SnackbarService _snackBar = SnackbarService();
   // Create a FocusNode to manage TextField focus
   final FocusNode searchFocusNode = FocusNode();
-
 
   /// Initializes the view model by fetching the list of characters.
   /// This method is called when the view is ready to load initial data.
@@ -60,8 +58,7 @@ class CharacterGalleryViewModel extends BaseViewModel {
 
   /// Navigates to the character detail screen.
   void navigateToCharacterDetailPage(int characterId) {
-    _navigationService
-        .navigateToView(CharacterDetailView(characterId: characterId));
+    _navigationService.navigateToCharacterDetailView(characterId: characterId);
     searchFocusNode.unfocus();
   }
 }

@@ -43,7 +43,6 @@ class CharacterGalleryView extends StackedView<CharacterGalleryViewModel> {
             );
 
             if (shouldExit == true) {
-
               if (Platform.isAndroid) {
                 SystemNavigator.pop();
               } else if (Platform.isIOS) {
@@ -89,29 +88,31 @@ class CharacterGalleryView extends StackedView<CharacterGalleryViewModel> {
                     Expanded(
                       child: viewModel.filteredCharacters.isEmpty
                           ? const Center(
-                        child: Text(
-                          "No characters found.",
-                          style: TextStyle(fontSize: 16, color: Colors.grey),
-                        ),
-                      )
+                              child: Text(
+                                "No characters found.",
+                                style:
+                                    TextStyle(fontSize: 16, color: Colors.grey),
+                              ),
+                            )
                           : ListView.builder(
-                        itemCount: viewModel.filteredCharacters.length,
-                        itemBuilder: (context, index) {
-                          final character = viewModel.filteredCharacters[index];
-                          return ListTile(
-                            leading: CircleAvatar(
-                              backgroundImage: NetworkImage(character.image),
+                              itemCount: viewModel.filteredCharacters.length,
+                              itemBuilder: (context, index) {
+                                final character =
+                                    viewModel.filteredCharacters[index];
+                                return ListTile(
+                                  leading: CircleAvatar(
+                                    backgroundImage:
+                                        NetworkImage(character.image),
+                                  ),
+                                  title: Text(character.name),
+                                  subtitle: Text(character.species),
+                                  onTap: () {
+                                    viewModel.navigateToCharacterDetailPage(character.id);
+                                  },
+                                );
+                              },
                             ),
-                            title: Text(character.name),
-                            subtitle: Text(character.species),
-                            onTap: () {
-                              viewModel.navigateToCharacterDetailPage(character.id);
-                            },
-                          );
-                        },
-                      ),
                     ),
-
                   ],
                 ),
         ),
@@ -126,7 +127,7 @@ class CharacterGalleryView extends StackedView<CharacterGalleryViewModel> {
       CharacterGalleryViewModel();
 
   @override
-  void onViewModelReady(CharacterGalleryViewModel viewModel) =>
-      SchedulerBinding.instance
-          .addPostFrameCallback((timeStamp) => viewModel.runStartupLogic());
+  Future<void> onViewModelReady(CharacterGalleryViewModel viewModel) async {
+    viewModel.runStartupLogic();
+  }
 }

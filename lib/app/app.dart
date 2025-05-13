@@ -5,6 +5,7 @@ import 'package:character_finder/ui/dialogs/info_alert/info_alert_dialog.dart';
 import 'package:character_finder/ui/views/startup/startup_view.dart';
 import 'package:character_finder/ui/views/character_gallery/character_gallery_view.dart';
 
+import 'package:character_finder/ui/views/character_detail/character_detail_view.dart';
 // @stacked-import
 
 @StackedApp(
@@ -12,6 +13,7 @@ import 'package:character_finder/ui/views/character_gallery/character_gallery_vi
     MaterialRoute(page: StartupView),
     MaterialRoute(page: CharacterGalleryView),
 
+    MaterialRoute(page: CharacterDetailView),
 // @stacked-route
   ],
   dependencies: [

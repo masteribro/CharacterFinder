@@ -1,4 +1,3 @@
-
 class CharacterResponse {
   final Info info;
   final List<Character> results;
